@@ -20,4 +20,4 @@ def post_image(img_file):
   cv2.imshow('Image', img)
   cv2.waitKey(0)
 
-post_image('example/test.jpg')
+post_image('example/test2.jpg')

@@ -5,15 +5,16 @@ MAINTAINER Remi "remiaston@gmail.com"
 RUN apt-get update && apt-get install -y python-dev python-pip cmake 
 
 # We copy just the requirements.txt first to leverage Docker cache
-COPY ./requirements.txt /app/requirements.txt
+COPY server/requirements.txt app/server/requirements.txt
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+RUN pip install -r server/requirements.txt
 
-# COPY . /app
-COPY ./app /app
+COPY ./server server
+
+COPY ./frontend frontend
 
 ENTRYPOINT [ "python" ]
 
-CMD [ "app.py" ]
+CMD ["server/app.py"]

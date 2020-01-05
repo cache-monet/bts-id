@@ -9,14 +9,18 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ]
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
   output: {
-    path: path.resolve(__dirname, 'dist/'),
+    path: path.resolve('./dist/static'),
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -28,3 +32,5 @@ module.exports = {
     hot: true
   }
 };
+
+    // path: path.resolve(__dirname, '/dist/static'),

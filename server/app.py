@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO)
 
 # Initialize the Flask application
 # app = Flask(__name__, static_folder='../static/dist', template_folder='../static')
-app = Flask(__name__, static_folder='../frontend/static', template_folder='../frontend/templates')
+app = Flask(__name__, static_folder='../frontend/dist/static', template_folder='../frontend/dist/templates')
 
 @app.route('/', methods=['GET'])
 def get_index():

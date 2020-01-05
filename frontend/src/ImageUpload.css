@@ -1,0 +1,29 @@
+h3 {
+  margin-left: 15px;
+}
+
+.imgPreview {
+  text-align: center;
+  margin: 5px 15px;
+  max-height: 80%;
+  max-width: 100%;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #808080;
+  border-top: 5px solid #808080;
+  border-bottom: 5px solid #808080;
+}
+.imgPreview img {
+  width: 100%;
+  height: 100%;
+}
+.previewText {
+  width: 100%;
+  margin-top: 10px;
+}
+.submitButton:hover {
+  background: #efefef;
+}
+.centerText {
+  text-align: center;
+  width: 500px;
+}

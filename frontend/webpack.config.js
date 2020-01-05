@@ -32,5 +32,3 @@ module.exports = {
     hot: true
   }
 };
-
-    // path: path.resolve(__dirname, '/dist/static'),

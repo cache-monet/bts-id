@@ -1,5 +1,6 @@
 from flask import Response, make_response
 from helpers.facial_recognition.image import process
+import base64
 import cv2
 import logging
 import numpy as np
@@ -12,6 +13,8 @@ def identify(raw):
     identified = process(img)
     # Return processed image
     retval, buffer = cv2.imencode('.png', identified)
-    response = make_response(buffer.tobytes())
-    response.headers['Content-Type'] = 'image/png'
+    response = make_response(base64.b64encode(buffer))
+      # buffer.tobytes())
+    response.headers['Content-Type'] = 'application/json'
+    # response.headers['Content-Type'] = 'image/png'
     return response
